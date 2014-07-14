@@ -59,5 +59,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     {
         return favorites.count
     }
+
+    func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!)
+    {
+        if editingStyle == UITableViewCellEditingStyle.Delete
+        {
+            favorites.removeAtIndex(indexPath.row)
+            tableView.reloadData()
+        }
+    }
 }
 
