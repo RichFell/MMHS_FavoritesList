@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         favorites = ["Snowboarding", "Coding", "Muay Thai", "Jet Skiing"]
     }
 
+    //IBAction that will show the UIAlertController and access it's properties so we can use it to add to our Array
     @IBAction func onButtonPressedAddFavorite(sender: AnyObject)
     {
         let alert = UIAlertController(title: "Add another favorite activity", message: nil, preferredStyle: .Alert)
@@ -45,6 +46,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     }
 
+
+    //UITableViewDataSource function that allows us to access our UITableViewCells and change their properties
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("CellID", forIndexPath: indexPath) as UITableViewCell
@@ -55,11 +58,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
 
+    //UITableViewDataSource function that allows us to tell the UITableView how many cells it will return for us
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
     {
         return favorites.count
     }
 
+    //UITableViewDelegate function allows us to enter the UITableView EditingStyle and the delete objects out of our tableView(Array)
     func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!)
     {
         if editingStyle == UITableViewCellEditingStyle.Delete
