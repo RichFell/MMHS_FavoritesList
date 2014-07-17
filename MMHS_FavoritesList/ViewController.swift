@@ -18,6 +18,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
     }
 
+    //Action that shows our UIAlertController which we will use to add data to our Array and UITableView
     @IBAction func onButtonPressedAddFavorite(sender: AnyObject)
     {
         let alert = UIAlertController(title: "Add another favorite activity", message: nil, preferredStyle: .Alert)
@@ -43,6 +44,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     }
 
+    //UITableViewDataSource function that allows us to access our UITableViewCells and change their properties
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("CellID", forIndexPath: indexPath) as UITableViewCell
@@ -53,6 +55,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
 
+    //UITableViewDataSource function that allows us to determine the amount rows we will be returning
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
     {
         return favorites.count
