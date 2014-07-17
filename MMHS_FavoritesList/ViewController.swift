@@ -11,13 +11,11 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
                             
     @IBOutlet var tableView: UITableView
-    var favorites = [String]()
+    var favorites = ["Snowboarding", "Coding", "Muay Thai", "Jet Skiing"]
 
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        favorites = ["Snowboarding", "Coding", "Muay Thai", "Jet Skiing"]
     }
 
     @IBAction func onButtonPressedAddFavorite(sender: AnyObject)
