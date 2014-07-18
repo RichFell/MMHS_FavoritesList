@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
                             
     @IBOutlet var tableView: UITableView
     var favorites = ["Snowboarding", "Coding", "Muay Thai", "Jet Skiing"]
