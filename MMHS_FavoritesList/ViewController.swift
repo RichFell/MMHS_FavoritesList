@@ -67,6 +67,7 @@ func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITable
     if editingStyle == UITableViewCellEditingStyle.Delete
     {
         favorites.removeAtIndex(indexPath.row)
+        tableView.reloadData()
     }
 }
 }
