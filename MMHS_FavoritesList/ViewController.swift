@@ -10,7 +10,7 @@ import UIKit
 
 class MyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
                             
-    @IBOutlet var tableView: UITableView
+    @IBOutlet var tableView: UITableView!
     var favorites = ["Snowboarding", "Coding", "Muay Thai", "Jet Skiing"]
 
     override func viewDidLoad()
@@ -60,5 +60,14 @@ class MyViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     {
         return favorites.count
     }
+
+func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!)
+{
+
+    if editingStyle == UITableViewCellEditingStyle.Delete
+    {
+        favorites.removeAtIndex(indexPath.row)
+    }
+}
 }
 
