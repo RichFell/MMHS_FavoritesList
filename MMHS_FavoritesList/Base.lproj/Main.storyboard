@@ -20,13 +20,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellID" id="vkG-fV-kiq">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellID" id="vkG-fV-kiq">
                                         <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vkG-fV-kiq" id="2kK-aE-gIw">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="gXC-t9-i2r" kind="push" id="0WN-Hb-JsV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -57,6 +60,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="997" y="412"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="kgm-3J-lxQ">
+            <objects>
+                <viewController id="gXC-t9-i2r" customClass="MapViewController" customModule="MMHS_FavoritesList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dGe-ck-G7v"/>
+                        <viewControllerLayoutGuide type="bottom" id="KoS-lf-gv4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9bM-rd-iap">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="f8f-Bx-Ct7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f8f-Bx-Ct7" firstAttribute="top" secondItem="9bM-rd-iap" secondAttribute="top" id="kI4-sN-Cth"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aOj-sf-ATH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hw3-aV-Njh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1374" y="413"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LuX-1P-I0o">

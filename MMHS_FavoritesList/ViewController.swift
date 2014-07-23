@@ -11,7 +11,7 @@ import UIKit
 class MyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
                             
     @IBOutlet var tableView: UITableView!
-    var favorites = ["Snowboarding", "Coding", "Muay Thai", "Jet Skiing"]
+    var favorites = ["Columbus, OH", "Salt Lake City, UT", "Chicago, IL", "Hatteras, NC"]
 
     override func viewDidLoad()
     {
@@ -21,7 +21,7 @@ class MyViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     //Action that shows our UIAlertController which we will use to add data to our Array and UITableView
     @IBAction func onButtonPressedAddFavorite(sender: AnyObject)
     {
-        let alert = UIAlertController(title: "Add another favorite activity", message: nil, preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Add another favorite city", message: nil, preferredStyle: .Alert)
         alert.addTextFieldWithConfigurationHandler({ textField in
             textField.placeholder = "Add a new favorite"
             })
@@ -48,9 +48,9 @@ class MyViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("CellID", forIndexPath: indexPath) as UITableViewCell
-        let favorite = favorites[indexPath.row] as String
+        let city = favorites[indexPath.row] as String
 
-        cell.textLabel.text = favorite
+        cell.textLabel.text = city
 
         return cell
     }
@@ -61,14 +61,22 @@ class MyViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         return favorites.count
     }
 
-func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!)
-{
-
-    if editingStyle == UITableViewCellEditingStyle.Delete
+    func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!)
     {
-        favorites.removeAtIndex(indexPath.row)
-        tableView.reloadData()
+
+        if editingStyle == UITableViewCellEditingStyle.Delete
+        {
+            favorites.removeAtIndex(indexPath.row)
+            tableView.reloadData()
+        }
     }
-}
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!)
+    {
+        let mapVC = segue.destinationViewController as MapViewController
+        let indexPath = tableView.indexPathForSelectedRow()
+        let city = favorites[indexPath.row] as String
+
+    }
+
 }
 

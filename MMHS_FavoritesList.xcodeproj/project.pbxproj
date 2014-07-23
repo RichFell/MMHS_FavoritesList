@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B78B425197FFDFF0070907C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B78B424197FFDFF0070907C /* MapViewController.swift */; };
+		9B78B427197FFE3B0070907C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B78B426197FFE3B0070907C /* MapKit.framework */; };
 		9BB111461974631C009CB789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB111451974631C009CB789 /* AppDelegate.swift */; };
 		9BB111491974631C009CB789 /* MMHS_FavoritesList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BB111471974631C009CB789 /* MMHS_FavoritesList.xcdatamodeld */; };
 		9BB1114B1974631C009CB789 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1114A1974631C009CB789 /* ViewController.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B78B424197FFDFF0070907C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
+		9B78B426197FFE3B0070907C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9BB111401974631C009CB789 /* MMHS_FavoritesList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMHS_FavoritesList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB111441974631C009CB789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BB111451974631C009CB789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B78B427197FFE3B0070907C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +64,7 @@
 		9BB111371974631C009CB789 = {
 			isa = PBXGroup;
 			children = (
+				9B78B426197FFE3B0070907C /* MapKit.framework */,
 				9BB111421974631C009CB789 /* MMHS_FavoritesList */,
 				9BB111581974631C009CB789 /* MMHS_FavoritesListTests */,
 				9BB111411974631C009CB789 /* Products */,
@@ -79,6 +85,7 @@
 			children = (
 				9BB111451974631C009CB789 /* AppDelegate.swift */,
 				9BB1114A1974631C009CB789 /* ViewController.swift */,
+				9B78B424197FFDFF0070907C /* MapViewController.swift */,
 				9BB1114C1974631C009CB789 /* Main.storyboard */,
 				9BB1114F1974631C009CB789 /* Images.xcassets */,
 				9BB111471974631C009CB789 /* MMHS_FavoritesList.xcdatamodeld */,
@@ -214,6 +221,7 @@
 				9BB1114B1974631C009CB789 /* ViewController.swift in Sources */,
 				9BB111491974631C009CB789 /* MMHS_FavoritesList.xcdatamodeld in Sources */,
 				9BB111461974631C009CB789 /* AppDelegate.swift in Sources */,
+				9B78B425197FFDFF0070907C /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +409,7 @@
 				9BB111611974631C009CB789 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BB111621974631C009CB789 /* Build configuration list for PBXNativeTarget "MMHS_FavoritesListTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +418,7 @@
 				9BB111641974631C009CB789 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
