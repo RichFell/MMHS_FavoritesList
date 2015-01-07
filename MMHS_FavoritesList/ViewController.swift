@@ -12,6 +12,7 @@ class MyViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
                             
     @IBOutlet var tableView: UITableView!
     var favorites = ["Columbus, OH", "Salt Lake City, UT", "Chicago, IL", "Hatteras, NC"]
+    //Some changes to push..
 
     override func viewDidLoad()
     {
